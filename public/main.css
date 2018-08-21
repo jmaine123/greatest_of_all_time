@@ -42,7 +42,7 @@ h1{
 
 .banner{
   display: grid;
-  grid-template: .5fr 1.5fr/ 1.5fr .5fr;
+  grid-template: .5fr 1.5fr/ 1fr 1fr;
   background-color: rgb(25, 25, 73);
   color: gold;
   border: 1px solid black;
@@ -71,11 +71,16 @@ h1{
 
 .questions{
   display: block;
-  width:75%;
+  width:100%;
   margin: 10% auto;
   text-align: center;
   font-family: 'Diplomata SC', cursive;
   line-height: 2.5;
+}
+
+.question1{
+  font-size: 3.5em;
+  margin-bottom: 10%;
 }
 
 #getStarted{
@@ -92,5 +97,5 @@ h1{
 
 #goat_title{
   margin-top: -21%;
-  font-size: 6.7em;
+  font-size: 4.52em;
 }

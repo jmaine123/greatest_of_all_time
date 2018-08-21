@@ -9,41 +9,50 @@
   <h3><a href="post">Make A New Post</a></h3>
   <h3><a href="timeline">See Timeline</a></h3>
 
+  <h2>My Recent Posts</h2>
+
     <div class='myPost'>
-      <% @my_post.last(20).each do |post|%>
+      <% @my_post.last(20).reverse.each do |post|%>
 
       <div class='post'>
         <h2><%=post.title%></h2>
 
         <h2>By: <%=post.owner%></h2>
 
-        <h4><%= post.playerOne%></h4>
-        <img src="<%=post.playerOne_img%>" alt="">
-          <ul>
-            <li><%=post.p1_statOne%></li>
-            <li><%=post.p1_statTwo%></li>
-            <li><%=post.p1_statThree%></li>
-          </ul>
-        <h4><%= post.playerTwo%></h4>
-        <img src="<%=post.playerTwo_img%>" alt="">
-        <ul>
-          <li><%=post.p2_statOne%></li>
-          <li><%=post.p2_statTwo%></li>
-          <li><%=post.p2_statThree%></li>
-        </ul>
-        <h4><%= post.playerThree%></h4>
-        <img src="<%=post.playerThree_img%>" alt="">
-        <ul>
-          <li><%=post.p3_statOne%></li>
-          <li><%=post.p3_statTwo%></li>
-          <li><%=post.p3_statThree%></li>
-        </ul>
+        <div class="img_grid">
+          <div>
+            <img src="<%=post.playerOne_img%>" alt="">
+            <h4><%= post.playerOne%></h4>
+              <ul>
+                <li><%=post.p1_statOne%></li>
+                <li><%=post.p1_statTwo%></li>
+                <li><%=post.p1_statThree%></li>
+              </ul>
+          </div>
+          <div>
+            <img src="<%=post.playerTwo_img%>" alt="">
+            <h4><%= post.playerTwo%></h4>
+            <ul>
+              <li><%=post.p2_statOne%></li>
+              <li><%=post.p2_statTwo%></li>
+              <li><%=post.p2_statThree%></li>
+            </ul>
+          </div>
+          <div>
+            <img src="<%=post.playerThree_img%>" alt="">
+            <h4><%= post.playerThree%></h4>
+
+            <ul>
+              <li><%=post.p3_statOne%></li>
+              <li><%=post.p3_statTwo%></li>
+              <li><%=post.p3_statThree%></li>
+            </ul>
+          </div>
+        </div>
 
         <p><%=post.content%></p>
 
-        <p><%post.created_at%></p>
-
-
+        <p><%=post.created_at%></p>
       </div>
       <% end %>
     </div>

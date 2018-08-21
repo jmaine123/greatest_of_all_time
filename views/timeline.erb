@@ -11,38 +11,39 @@
     <h2>By: <%=post.owner%></h2>
 
     <div class="img_grid">
-      <img src="<%=post.playerOne_img%>" alt="">
-      <img src="<%=post.playerTwo_img%>" alt="">
-      <img src="<%=post.playerThree_img%>" alt="">
+      <div>
+        <img src="<%=post.playerOne_img%>" alt="">
+        <h4><%= post.playerOne%></h4>
+          <ul>
+            <li><%=post.p1_statOne%></li>
+            <li><%=post.p1_statTwo%></li>
+            <li><%=post.p1_statThree%></li>
+          </ul>
+      </div>
+      <div>
+        <img src="<%=post.playerTwo_img%>" alt="">
+        <h4><%= post.playerTwo%></h4>
+        <ul>
+          <li><%=post.p2_statOne%></li>
+          <li><%=post.p2_statTwo%></li>
+          <li><%=post.p2_statThree%></li>
+        </ul>
+      </div>
+      <div>
+        <img src="<%=post.playerThree_img%>" alt="">
+        <h4><%= post.playerThree%></h4>
+
+        <ul>
+          <li><%=post.p3_statOne%></li>
+          <li><%=post.p3_statTwo%></li>
+          <li><%=post.p3_statThree%></li>
+        </ul>
+      </div>
     </div>
-
-    <h4><%= post.playerOne%></h4>
-
-      <ul>
-        <li><%=post.p1_statOne%></li>
-        <li><%=post.p1_statTwo%></li>
-        <li><%=post.p1_statThree%></li>
-      </ul>
-    <h4><%= post.playerTwo%></h4>
-
-    <ul>
-      <li><%=post.p2_statOne%></li>
-      <li><%=post.p2_statTwo%></li>
-      <li><%=post.p2_statThree%></li>
-    </ul>
-    <h4><%= post.playerThree%></h4>
-
-    <ul>
-      <li><%=post.p3_statOne%></li>
-      <li><%=post.p3_statTwo%></li>
-      <li><%=post.p3_statThree%></li>
-    </ul>
 
     <p><%=post.content%></p>
 
     <p><%=post.created_at%></p>
-
-
   </div>
 
   <hr>

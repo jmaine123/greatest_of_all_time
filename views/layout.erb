@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="/login.css">
     <link rel="stylesheet" href="/signup.css">
@@ -13,8 +14,8 @@
   <body>
     <div class="banner">
       <nav id='navbar'>
-        <li><a href="/">Home</a></li>
         <% if session[:user] == nil%>
+        <li><a href="/">Home</a></li>
         <li><a href="/signup">Sign Up</a></li>
         <li><a href="/login">Log In</a></li>
         <% elsif session[:user] != nil %>
@@ -26,7 +27,9 @@
         <h1 id='goat_title'>G . O . A . T</h1>
       </div>
       <div class="picture">
-        <img  id='athlete' src='/images/michael_jordan.png' alt="">
+        <% arr = ['/images/michael_jordan.png','/images/muhammadAli.png','/images/kobe.png']%>
+        <% num = Random.rand(0..2)%>
+        <img  id='athlete' src='<%=arr[num]%>' alt="">
       </div>
     </div>
     <div class="container">

@@ -1,4 +1,11 @@
 .post{
   border: 2px solid black;
   margin-bottom: 10%;
+  font-family: 'Signika', sans-serif;
+}
+
+.img_grid{
+  display: grid;
+  grid-template: 100%/repeat(3, 1fr);
+  padding: 5%;
 }
