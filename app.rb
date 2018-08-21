@@ -67,10 +67,24 @@ end
 post '/post' do
   author = session[:user]
   post = Post.new(
-    title: params[:title],
-    content: params[:content],
-    image_url: params[:url],
     category: params[:category],
+    title: params[:title],
+    playerOne: params[:playerone],
+    playerOne_img: params[:p1_url],
+    p1_statOne: params[:p1_statOne],
+    p1_statTwo: params[:p1_statTwo],
+    p1_statThree: params[:p1_statThree],
+    playerTwo: params[:playertwo],
+    playerTwo_img: params[:p2_url],
+    p2_statOne: params[:p2_statOne],
+    p2_statTwo: params[:p2_statTwo],
+    p2_statThree: params[:p2_statThree],
+    playerThree: params[:playerthree],
+    playerThree_img: params[:p3_url],
+    p3_statOne: params[:p3_statOne],
+    p3_statTwo: params[:p3_statTwo],
+    p3_statThree: params[:p3_statThree],
+    content: params[:content],
     owner: session[:user].first_name
   )
   p post.owner

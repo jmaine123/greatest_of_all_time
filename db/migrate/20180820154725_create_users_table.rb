@@ -13,7 +13,21 @@ class CreateUsersTable < ActiveRecord::Migration[5.2]
     create_table :posts do |po|
       po.string :owner
       po.string :title
-      po.string :image_url
+      po.string :playerOne
+      po.string :playerTwo
+      po.string :playerThree
+      po.string :playerOne_img
+      po.string :playerTwo_img
+      po.string :playerThree_img
+      po.string :p1_statOne
+      po.string :p1_statTwo
+      po.string :p1_statThree
+      po.string :p2_statOne
+      po.string :p2_statTwo
+      po.string :p2_statThree
+      po.string :p3_statOne
+      po.string :p3_statTwo
+      po.string :p3_statThree
       po.string :content
       po.string :category
       po.datetime :created_at

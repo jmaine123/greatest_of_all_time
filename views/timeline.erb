@@ -1,19 +1,49 @@
-<div class="post">
+<div>
   <a href="post">Make a New Post</a><br>
   <a href="account">My Post</a>
   <h2>Timeline</h2>
 
   <% $all_post.last(20).each do |post|%>
 
-  <h2><%=post.title%></h2>
+  <div class='post'>
+    <h2><%=post.title%></h2>
 
-  <p>Posted by: <%=post.owner%></p>
+    <h2>By: <%=post.owner%></h2>
 
-  <p><%=post.content%></p>
+    <div class="img_grid">
+      <img src="<%=post.playerOne_img%>" alt="">
+      <img src="<%=post.playerTwo_img%>" alt="">
+      <img src="<%=post.playerThree_img%>" alt="">
+    </div>
 
-  <p><%=post.category%></p>
+    <h4><%= post.playerOne%></h4>
 
-  <img src="<%=post.image_url%>">
+      <ul>
+        <li><%=post.p1_statOne%></li>
+        <li><%=post.p1_statTwo%></li>
+        <li><%=post.p1_statThree%></li>
+      </ul>
+    <h4><%= post.playerTwo%></h4>
+
+    <ul>
+      <li><%=post.p2_statOne%></li>
+      <li><%=post.p2_statTwo%></li>
+      <li><%=post.p2_statThree%></li>
+    </ul>
+    <h4><%= post.playerThree%></h4>
+
+    <ul>
+      <li><%=post.p3_statOne%></li>
+      <li><%=post.p3_statTwo%></li>
+      <li><%=post.p3_statThree%></li>
+    </ul>
+
+    <p><%=post.content%></p>
+
+    <p><%=post.created_at%></p>
+
+
+  </div>
 
   <hr>
 
