@@ -5,7 +5,6 @@ enable :sessions
 set :database, "sqlite3:goat.sqlite3"
 
 get '/' do
-  $all_post = Post.all
   erb :home
 end
 
@@ -18,9 +17,9 @@ post '/login' do
   given_password = params['password']
   #check if email exists
   #check to see if the email has a password == form password
-  p user = User.find_by(email: email)
+  user = User.find_by(email: email)
   if user.password == given_password
-    p session[:user] = user
+    session[:user] = user
     redirect :account
   else
     p "Invalid credentials"
@@ -33,7 +32,6 @@ get '/signup' do
 end
 
 post '/signup' do
-  p params
   user = User.new(
     email: params['email'],
     first_name: params['firstname'],
@@ -46,7 +44,8 @@ end
 
 
 get '/account' do
-
+owner = session[:user]
+p $all_post = Post.all
 erb :account
 end
 
@@ -66,15 +65,21 @@ post '/post' do
   post = Post.new(
     title: params[:title],
     content: params[:content],
-    image_url: params[:url]
+    image_url: params[:url],
+    category: params[:category],
+    owner: session[:user].first_name
   )
-  p post.title
+  p post.owner
 
   post.save
 
-  @title = post.title
-  @content = post.content
+  post.user = author
+
   redirect :post
+end
+
+get '/timeline' do
+  erb :timeline
 end
 
 require "./models"

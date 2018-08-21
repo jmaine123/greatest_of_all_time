@@ -11,7 +11,7 @@ class CreateUsersTable < ActiveRecord::Migration[5.2]
     end
 
     create_table :posts do |po|
-      po.integer :user_id
+      po.string :owner
       po.string :title
       po.string :image_url
       po.string :content
@@ -19,6 +19,6 @@ class CreateUsersTable < ActiveRecord::Migration[5.2]
       po.datetime :created_at
       po.datetime :updated_at
     end
-    add_index :posts, :user_id
+    add_column :posts, :user_id, :integer
   end
 end

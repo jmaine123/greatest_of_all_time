@@ -1,13 +1,13 @@
-<h1>Welcome Back </h1>
 
 <% if session[:user] == nil%>
   <p>No one is logged in</p>
 <% elsif session[:user] != nil %>
-  <p>Welcome back,  <%= session[:user].first_name.capitalize%></p>
+  <h1>Welcome back,  <%= session[:user].first_name.capitalize%></h1>
 <% end %>
 
 <div class="post">
-  <a href="post">Make a New Post</a>
+  <h3><a href="post">Make A New Post</a><h3>
+  <h3><a href="timeline">See Timeline</a><h3>
 
 
   <% $all_post.each do |post|%>
