@@ -5,18 +5,24 @@
   <h1>Welcome back,  <%= session[:user].first_name.capitalize%></h1>
 <% end %>
 
-<div class="post">
+<div class="myAccount">
   <h3><a href="post">Make A New Post</a><h3>
   <h3><a href="timeline">See Timeline</a><h3>
 
+    <div class="post">
+      <% @my_post.last(20).each do |post|%>
 
-  <% $all_post.each do |post|%>
+      <h2><%=post.title%></h2>
 
-  <h2><%=post.title%></h2>
+      <h3>By: <%=post.owner%></h3>
 
-  <p><%=post.content%></p>
+      <p><%=post.content%></p>
 
-  <img src="<%=post.image_url%>">
+      <p><%post.created_at%></p>
 
-  <% end %>
+      <img src="<%=post.image_url%>">
+
+      <% end %>
+    </div>
+
 </div>
