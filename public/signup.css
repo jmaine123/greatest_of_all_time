@@ -1,0 +1,17 @@
+body { padding-top:30px; }
+.form-control { margin-bottom: 10px; }
+
+.well{
+  background-color: #fdcb6e;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+body{
+  background-color: #fdcb6e;
+}
+
+.signup-form{
+  width: 80%;
+  margin: 10% auto;
+}

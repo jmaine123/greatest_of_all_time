@@ -1,0 +1,89 @@
+html{
+  background-color: #fdcb6e;
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: 'Diplomata SC', cursive;
+}
+
+#navbar{
+  display: inline-block;
+  grid-column:1/-2;
+  grid-row: 1/2;
+}
+
+#navbar a{
+  text-decoration: none;
+  color: #fdcb6e;
+}
+
+#navbar li{
+  display: inline-block;
+  margin-left: 5%;
+  list-style: none;
+  font-size: 20px;
+
+}
+
+.picture{
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+}
+
+.banner{
+  display: grid;
+  grid-template: .5fr 1.5fr/ 1.5fr .5fr;
+  background-color: rgb(25, 25, 73);
+  color: gold;
+  border: 1px solid black;
+  height:60%;
+  width: 100%;
+}
+
+.container{
+  height: 800px;
+}
+
+#athlete{
+  height: 100%;
+  width: 100%;
+}
+
+.logo_title{
+  margin:auto auto;
+  font-size: 2.5em;
+  font-family: 'Diplomata SC', cursive;
+}
+
+.content-container{
+  height: 30%;
+  width: 75%;
+  margin: 10% auto;
+}
+
+.questions{
+  display: block;
+  width:75%;
+  margin: 10% auto;
+  text-align: center;
+  font-family: 'Diplomata SC', cursive;
+  line-height: 2.5;
+}
+
+#getStarted{
+  font-size: 1.5em;
+  border-radius: 10%;
+  background-color: rgb(25, 25, 73);
+  color:gold;
+}
+
+#content{
+  height:100px;
+  width:20%;
+}
