@@ -7,12 +7,13 @@ body{
   margin: 0;
   padding: 0;
   background-image: radial-gradient(circle at top right, red,rgb(25, 25, 73),black);
+  animation-name: float;
+  animation-duration: 1s;
   color: white;
 }
 
 
 h1{
-  font-family: 'Diplomata SC', cursive;
   font-size: 2.7em;
   font-family: 'Diplomata SC', cursive;
 }
@@ -25,6 +26,15 @@ form{
   text-align: center;
 }
 
+@keyframes float {
+    0%   {background-image: radial-gradient(circle at bottom left, red, black, rgb(25, 25, 73));}
+    25%  {background-image: radial-gradient(farthest-side at 25% 75%, red, black, rgb(25, 25, 73));}
+    35%  {background-image: radial-gradient(farthest-side at 25% 75%, red, black, rgb(25, 25, 73));}
+    50%  {background-image: radial-gradient(circle at center, red, black, rgb(25, 25, 73));}
+    65%  {background-image: radial-gradient(farthest-side at 75% 25%, red, black, rgb(25, 25, 73));}
+    75%  {background-image: radial-gradient(farthest-side at 75% 25%, red, black, rgb(25, 25, 73));}
+    100% {background-image: radial-gradient(circle at top right, red, black, rgb(25, 25, 73));}
+}
 #navbar{
   display: inline-block;
   grid-column:1/-2;
@@ -57,14 +67,13 @@ form{
   display: grid;
   grid-template: .5fr 1.5fr/ 1fr 1fr;
   color: gold;
-  border: 1px solid black;
   height:70vh;
   width: 100%;
 }
 
 .container{
   height: 100%;
-  width:70%;
+  width:75%;
 }
 
 #athlete{
@@ -87,7 +96,7 @@ form{
   width:100%;
   margin: 10% auto;
   text-align: center;
-  font-family: 'Diplomata SC', cursive;
+  font-family: 'Signika', sans-serif;
   line-height: 2.5;
 }
 
@@ -96,11 +105,19 @@ form{
   margin-bottom: 10%;
 }
 
-#getStarted{
+.getStarted{
   font-size: 1.5em;
   border-radius: 10%;
   background-color: rgb(25, 25, 73);
+  font-family: 'Signika', sans-serif;
+  margin-bottom: 5%;
   color:gold;
+  box-shadow: 2px 2px 2px white;
+}
+
+.getStarted:hover{
+  background-color: gold;
+  color: rgb(25, 25, 73);
 }
 
 

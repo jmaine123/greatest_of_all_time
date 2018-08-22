@@ -98,7 +98,7 @@ end
 
 get '/timeline' do
   user = session[:user].id
-  @all_post = Post.where.not(id: user)
+  @all_post = Post.where.not(user_id: user)
   erb :timeline
 end
 
