@@ -22,16 +22,35 @@
               <div class="col-xs-4 col-md-4">
                   <select class="form-control">
                       <option value="Month">Month</option>
+                      <option value="Month">Jan</option>
+                      <option value="Month">Feb</option>
+                      <option value="Month">March</option>
+                      <option value="Month">April</option>
+                      <option value="Month">May</option>
+                      <option value="Month">June</option>
+                      <option value="Month">July</option>
+                      <option value="Month">August</option>
+                      <option value="Month">September</option>
+                      <option value="Month">October</option>
+                      <option value="Month">November</option>
+                      <option value="Month">December</option>
                   </select>
               </div>
               <div class="col-xs-4 col-md-4">
                   <select class="form-control">
                       <option value="Day">Day</option>
+                    <%(1..31).each do |num|%>
+                      <option value="Day"><%=num%></option>
+                    <% end %>
                   </select>
               </div>
               <div class="col-xs-4 col-md-4">
                   <select class="form-control">
                       <option value="Year">Year</option>
+                      <%(1940..2018).each do |year| %>
+                        <option value="Day"><%=year%></option>
+
+                        <%end%>
                   </select>
               </div>
           </div>

@@ -1,11 +1,20 @@
 .post{
-  border: 2px solid black;
+  border: 2px solid;
+  margin-top: 10%;
   margin-bottom: 10%;
   font-family: 'Signika', sans-serif;
+  text-align: center;
+  border-radius: 10%;
 }
 
 .img_grid{
   display: grid;
   grid-template: 100%/repeat(3, 1fr);
   padding: 5%;
+  grid-gap: 3%;
+  font-size: 2em;
+}
+
+.img_grid div{
+  box-shadow: 0px 10px 8px;
 }

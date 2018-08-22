@@ -97,8 +97,21 @@ post '/post' do
 end
 
 get '/timeline' do
-  $all_post = Post.all
+  user = session[:user].id
+  @all_post = Post.where.not(id: user)
   erb :timeline
+end
+
+get '/settings' do
+
+  erb :settings
+end
+
+get '/delete' do
+  current = session[:user].id
+  user = User.find_by(id: current)
+  user.destroy
+  redirect '/'
 end
 
 require "./models"

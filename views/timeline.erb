@@ -3,7 +3,7 @@
   <a href="account">My Post</a>
   <h2>Timeline</h2>
 
-  <% $all_post.last(20).reverse.each do |post|%>
+  <% @all_post.last(20).reverse.each do |post|%>
 
   <div class='post'>
     <h2><%=post.title%></h2>
@@ -12,7 +12,7 @@
 
     <div class="img_grid">
       <div>
-        <img src="<%=post.playerOne_img%>" alt="">
+        <img src="<%=post.playerOne_img%>" style="width:100%; height:50%" alt="">
         <h4><%= post.playerOne%></h4>
           <ul>
             <li><%=post.p1_statOne%></li>
@@ -21,7 +21,7 @@
           </ul>
       </div>
       <div>
-        <img src="<%=post.playerTwo_img%>" alt="">
+        <img src="<%=post.playerTwo_img%>" style="width:100%; height:50%" alt="">
         <h4><%= post.playerTwo%></h4>
         <ul>
           <li><%=post.p2_statOne%></li>
@@ -30,7 +30,7 @@
         </ul>
       </div>
       <div>
-        <img src="<%=post.playerThree_img%>" alt="">
+        <img src="<%=post.playerThree_img%>" style="width:100%; height:50%" alt="">
         <h4><%= post.playerThree%></h4>
 
         <ul>
