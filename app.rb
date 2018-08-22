@@ -48,8 +48,8 @@ end
 
 
 get '/account' do
-post_owner = session[:user].first_name
-p @my_post = Post.where(owner: post_owner)
+# post_owner = session[:user].first_name
+p @my_post = Post.where(owner: session[:user].first_name)
 erb :account
 end
 

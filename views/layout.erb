@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/login.css">
     <link rel="stylesheet" href="/signup.css">
     <link rel="stylesheet" href="/account.css">
+    <link rel="stylesheet" href="/post.css">
     <link rel="stylesheet" href="/main.css">
   </head>
   <body>
@@ -27,8 +28,8 @@
         <h1 id='goat_title'>G . O . A . T</h1>
       </div>
       <div class="picture">
-        <% arr = ['/images/michael_jordan.png','/images/muhammadAli.png','/images/kobe.png']%>
-        <% num = Random.rand(0..2)%>
+        <% arr = ['/images/michael_jordan.png','/images/muhammadAli.png','/images/kobe.png','/images/lebron.png','/images/tiger.png','/images/bolt.png','/images/mayweather.png','/images/serena.png','/images/simone_biles.png','/images/venus.png']%>
+        <% num = Random.rand(0..arr.length-1)%>
         <img  id='athlete' src='<%=arr[num]%>' alt="">
       </div>
     </div>

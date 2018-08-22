@@ -3,7 +3,7 @@
   <a href="account">My Post</a>
   <h2>Timeline</h2>
 
-  <% $all_post.last(20).each do |post|%>
+  <% $all_post.last(20).reverse.each do |post|%>
 
   <div class='post'>
     <h2><%=post.title%></h2>

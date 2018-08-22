@@ -6,7 +6,7 @@ html{
 body {
   padding-top: 15px;
   font-size: 12px;
-  background-color: #fdcb6e
+  background-image: linear-gradient(to right, red, rgb(25, 25, 73));
 }
 .main {
   max-width: 40%;
@@ -15,7 +15,7 @@ body {
 .login-or {
   position: relative;
   font-size: 18px;
-  color: #aaa;
+  color: white;
   margin-top: 10px;
           margin-bottom: 10px;
   padding-top: 10px;

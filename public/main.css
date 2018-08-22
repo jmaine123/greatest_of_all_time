@@ -6,6 +6,8 @@ html{
 body{
   margin: 0;
   padding: 0;
+  background-image: radial-gradient(circle at top right, red,rgb(25, 25, 73),black);
+  color: white;
 }
 
 
@@ -15,6 +17,13 @@ h1{
   font-family: 'Diplomata SC', cursive;
 }
 
+label{
+  color: white;
+}
+
+form{
+  text-align: center;
+}
 
 #navbar{
   display: inline-block;
@@ -35,6 +44,10 @@ h1{
 
 }
 
+#navbar li :hover{
+  color: yellow;
+}
+
 .picture{
   grid-column: 2/-1;
   grid-row: 1/-1;
@@ -43,15 +56,14 @@ h1{
 .banner{
   display: grid;
   grid-template: .5fr 1.5fr/ 1fr 1fr;
-  background-color: rgb(25, 25, 73);
   color: gold;
   border: 1px solid black;
-  height:100vh;
+  height:70vh;
   width: 100%;
 }
 
 .container{
-  height: 800px;
+  height: 100%;
 }
 
 #athlete{
@@ -90,12 +102,12 @@ h1{
   color:gold;
 }
 
-#content{
-  height:100px;
-  width:20%;
-}
 
 #goat_title{
   margin-top: -21%;
   font-size: 4.52em;
+}
+
+.lighter{
+  color:white; important!
 }

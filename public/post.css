@@ -1,8 +1,37 @@
 .post-form{
-  width: 50%;
+  width: 80%;
   height: 40%;
+  margin: 0 auto;
+  font-size: 1.5em;
+
 }
 
 .playerName{
-  width:50%;
+}
+
+.post_grid{
+  display: grid;
+  grid-template: 60% 40%/repeat(3, 1fr);
+  grid-gap: 5%;
+  grid-row-gap: 5%;
+  margin-top: 5%;
+}
+
+.post_grid div{
+  padding:2%;
+}
+
+.post_player{
+  border: 2px solid yellow;
+}
+
+#post_player_content{
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+  width:100%;
+}
+
+#content{
+  height:100px;
+  width:80%;
 }
