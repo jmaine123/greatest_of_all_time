@@ -129,3 +129,10 @@ form{
 .lighter{
   color:white; important!
 }
+
+#cancel_button{
+  color: yellow;
+  background-color: red;
+  font-size: 2em;
+  border: 1px solid black;
+}

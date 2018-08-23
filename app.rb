@@ -93,7 +93,7 @@ post '/post' do
 
   post.save
 
-  redirect :post
+  redirect :account
 end
 
 get '/timeline' do
