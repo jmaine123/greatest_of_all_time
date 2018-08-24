@@ -79,6 +79,7 @@ form{
 #athlete{
   height: 100%;
   width: 100%;
+  transition: 3s ease;
 }
 
 .logo_title{
@@ -124,15 +125,9 @@ form{
 #goat_title{
   margin-top: -21%;
   font-size: 4.52em;
+  text-shadow: 0px 6px black;
 }
 
 .lighter{
   color:white; important!
-}
-
-#cancel_button{
-  color: yellow;
-  background-color: red;
-  font-size: 2em;
-  border: 1px solid black;
 }

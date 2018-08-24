@@ -6,15 +6,21 @@
 <% end %>
 
 <div class="profile_grid">
+  <img src="https://t3.ftcdn.net/jpg/00/64/67/80/240_F_64678017_zUpiZFjj04cnLri7oADnyMH0XBYyQghG.jpg" style='margin:5% auto; height: 90%; width:70%;'alt="">
   <div class="profile">
-    <h3><a href="post">Make A New Post</a></h3>
-    <h3><a href="timeline">See Timeline</a></h3>
+    <h2>Profile Information</h2>
+    <ul>
+      <li>First Name: <%=@user.first_name%></li>
+      <li>Last Name: <%=@user.last_name%></li>
+      <li>Email: <%=@user.email%></li>
+    </ul>
   </div>
-  <div class="">
-
+  <div class="post_choice">
+    <a href="post"><button>Make A New Post</button></a>
+    <a href="timeline"><button>See Timeline</button></a>
   </div>
-  <div class="">
-
+  <div>
+    <center><a href="/delete"><button id="cancel_button"type="button" name="button">Cancel Account</button></a></center>
   </div>
 
 </div>
