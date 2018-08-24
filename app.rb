@@ -3,8 +3,8 @@ require 'sinatra/activerecord'
 enable :sessions
 
 require 'active_record'
-# set :database, "sqlite3:goat.sqlite3"
-ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+set :database, "sqlite3:goat.sqlite3"
+# ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
 
 
 
@@ -48,9 +48,10 @@ end
 
 
 get '/account' do
+p @user = session[:user]
 post_owner = session[:user]
 p @my_post = Post.where(owner: post_owner.first_name)
-@user = session[:user]
+
 erb :account
 end
 

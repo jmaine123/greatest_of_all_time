@@ -83,3 +83,10 @@
   color: red;
   background-color: yellow;
 }
+
+.posting_option{
+  color: white;
+  font-size: 2em;
+  background-color: rgb(8, 49, 172);
+  margin:0 auto;
+}

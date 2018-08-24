@@ -10,14 +10,14 @@
   <div class="profile">
     <h2>Profile Information</h2>
     <ul>
-      <li>First Name: <%=@user.first_name%></li>
-      <li>Last Name: <%=@user.last_name%></li>
-      <li>Email: <%=@user.email%></li>
+      <li>First Name: <%= session[:user].first_name %></li>
+      <li>Last Name: <%= session[:user].last_name%></li>
+      <li>Email: <%= session[:user].email%></li>
     </ul>
   </div>
   <div class="post_choice">
-    <a href="post"><button>Make A New Post</button></a>
-    <a href="timeline"><button>See Timeline</button></a>
+    <a class='posting_option' href="post"><button>Make A New Post</button></a>
+    <a class='posting_option' href="timeline"><button>See Timeline</button></a>
   </div>
   <div>
     <center><a href="/delete"><button id="cancel_button"type="button" name="button">Cancel Account</button></a></center>
