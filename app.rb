@@ -113,6 +113,7 @@ get '/delete' do
   current = session[:user].id
   user = User.find_by(id: current)
   user.destroy
+  session[:user] = nil
   redirect '/'
 end
 
