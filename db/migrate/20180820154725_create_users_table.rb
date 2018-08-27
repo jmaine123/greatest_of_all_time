@@ -34,6 +34,6 @@ class CreateUsersTable < ActiveRecord::Migration[5.2]
       po.datetime :updated_at
       po.references :user, foreign_key:true
     end
-    add_column :posts, :user_id, :integer
+
   end
 end
